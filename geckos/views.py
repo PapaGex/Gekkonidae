@@ -1,4 +1,5 @@
 from rest_framework import generics
+from rest_framework import viewsets
 from .models import Gecko
 from django.http import JsonResponse
 from .serializers import GeckoSerializer
@@ -12,6 +13,11 @@ def gecko_list(request):
         'geckos': list(geckos.values())
         }
     return JsonResponse(data)
+
+class GeckoViewSet(viewsets.ModelViewSet):
+    queryset = Gecko.objects.all()
+    serializer_class = GeckoSerializer
+
 
 class GeckoDetail(generics.RetrieveAPIView):
     queryset = Gecko.objects.all()
