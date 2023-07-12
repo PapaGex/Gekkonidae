@@ -31,7 +31,7 @@ urlpatterns = [
     path('', include(router.urls)),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     path('GeckoList/', gecko_list, name='gecko_list'),
-    path('<int:pk>', species_details, name='species_details'),
+    path('geckos/<int:pk>', species_details, name='species_details'),
     path('PostList/', PostList.as_view(), name='post_list'),
     path('blog/<int:pk>', PostDetail.as_view(), name='post_detail'),
     path('api-auth/', include('rest_framework.urls')),

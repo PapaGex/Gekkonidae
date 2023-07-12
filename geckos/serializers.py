@@ -18,4 +18,5 @@ class GeckoSerializer(serializers.ModelSerializer):
             "snout_to_vent",
             "lifespan",
             "species_range",
+            "geoLocation",
         )

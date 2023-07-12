@@ -17,6 +17,7 @@ class GeckoSerializer(serializers.Serializer):
             snout_to_vent = serializers.IntegerField()
             lifespan = serializers.IntegerField()
             species_range = serializers.CharField()
+            geoLocation = serializers.Charfield()
 
 class PostSerializer(serializers.Serializer):
 

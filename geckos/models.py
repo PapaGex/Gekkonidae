@@ -12,6 +12,7 @@ class Gecko(models.Model):
     snout_to_vent = models.CharField(max_length=200)
     lifespan = models.CharField(max_length=200)
     species_range = models.CharField(max_length=200)
+    geoLocation = models.CharField(max_length=200)
 
     def __str__(self):
         return self.name

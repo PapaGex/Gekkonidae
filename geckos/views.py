@@ -35,6 +35,7 @@ def species_details(request, pk):
         'snout_to_vent': gecko.snout_to_vent,
         'lifespan': gecko.lifespan,
         'species_range': gecko.species_range,
+        'geoLocation': gecko.geo_location,
     }
     return JsonResponse(data)
 
